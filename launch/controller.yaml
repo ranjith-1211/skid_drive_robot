@@ -1,0 +1,23 @@
+teslabot_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  FWR_J_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FWR_J
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  FWL_J_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FWL_J
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  BWR_J_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: BWR_J
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  BWL_J_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: BWL_J
+    pid: {p: 100.0, i: 0.01, d: 10.0}

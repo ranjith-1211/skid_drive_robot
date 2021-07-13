@@ -1,0 +1,599 @@
+<?xml version="1.0" ?>
+<robot name="teslabot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find teslabot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find teslabot_description)/urdf/teslabot.trans" />
+<xacro:include filename="$(find teslabot_description)/urdf/teslabot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0007212877824685968 -1.8352542159959962e-16 0.04760920091631852"/>
+    <mass value="0.14488567069532468"/>
+    <inertia ixx="0.000217" ixy="0.0" ixz="0.0" iyy="0.000656" iyz="0.0" izz="0.000872"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="spacerFR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.08927828778246824 -0.0649999999999999 -0.025608799083681577"/>
+    <mass value="0.007352555678129975"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerFR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerFR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="spacerFL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0892782877824684 0.06499999999999978 -0.025608799083681508"/>
+    <mass value="0.007352555678129974"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerFL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerFL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="spacerBL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0907217122175309 0.06499999999999961 -0.025608799083681577"/>
+    <mass value="0.007352555678129975"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerBL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerBL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="spacerBR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.09072171221753104 -0.06500000000000007 -0.02560879908368162"/>
+    <mass value="0.007352555678129975"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerBR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/spacerBR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.08927828778246873 0.06499999999999988 -0.04385879908368169"/>
+    <mass value="0.18810348845221944"/>
+    <inertia ixx="0.000677" ixy="0.0" ixz="0.0" iyy="0.000677" iyz="0.0" izz="0.001354"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.088557 0.065 -0.135218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.088557 0.065 -0.135218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motorFR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0625701447430693 -0.052844101221497256 -0.056758801360313804"/>
+    <mass value="0.11062025194414454"/>
+    <inertia ixx="8e-06" ixy="2e-06" ixz="0.0" iyy="4.6e-05" iyz="-0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motorFR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motorFR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.06257014474306946 0.05295589877850199 -0.05675880136031387"/>
+    <mass value="0.11062025194414454"/>
+    <inertia ixx="8e-06" ixy="2e-06" ixz="0.0" iyy="4.6e-05" iyz="-0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motorBR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.06401356917813268 -0.05295589877850185 -0.05675880136031448"/>
+    <mass value="0.11062025194414454"/>
+    <inertia ixx="8e-06" ixy="2e-06" ixz="-0.0" iyy="4.6e-05" iyz="0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motorBR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motorBR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motorBL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.064013569178132 0.052844101221497075 -0.05675880136031391"/>
+    <mass value="0.11062025194414454"/>
+    <inertia ixx="8e-06" ixy="2e-06" ixz="-0.0" iyy="4.6e-05" iyz="0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motorBL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/motorBL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FWR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.9354936350450833e-07 -0.018127093794777435 1.8200462143652674e-07"/>
+    <mass value="0.1680116657550928"/>
+    <inertia ixx="6.8e-05" ixy="-0.0" ixz="0.0" iyy="0.000114" iyz="0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.040801 0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/FWR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.040801 0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/FWR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FWL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.9354936350450833e-07 0.018127093794775728 2.1982801542280717e-07"/>
+    <mass value="0.1680116657550928"/>
+    <inertia ixx="6.8e-05" ixy="0.0" ixz="-0.0" iyy="0.000114" iyz="0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.040801 -0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/FWL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.040801 -0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/FWL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BWR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.935493642261533e-07 -0.01812709379477742 1.8200462145040452e-07"/>
+    <mass value="0.1680116657550928"/>
+    <inertia ixx="6.8e-05" ixy="-0.0" ixz="0.0" iyy="0.000114" iyz="0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.039359 0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/BWR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.039359 0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/BWR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BWL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.9354936418451993e-07 0.018127093794775714 2.198280154852572e-07"/>
+    <mass value="0.1680116657550928"/>
+    <inertia ixx="6.8e-05" ixy="0.0" ixz="-0.0" iyy="0.000114" iyz="0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.039359 -0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/BWL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.039359 -0.0634 -0.034459"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/BWL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="L298N__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0026192392225760537 -0.000249991294680452 -0.004255152374646368"/>
+    <mass value="0.02216639435647811"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.000721 0.0 -0.045609"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/L298N__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.000721 0.0 -0.045609"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/L298N__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04941328862548365 3.0023683409545152e-05 -0.05410879885082126"/>
+    <mass value="0.15463634880103655"/>
+    <inertia ixx="1.2e-05" ixy="-0.0" ixz="0.0" iyy="3e-05" iyz="0.0" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.091218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mi_powerbank_2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03540659440435652 9.6494343119419e-05 -0.038560722897280894"/>
+    <mass value="0.9711932513436171"/>
+    <inertia ixx="0.000392" ixy="6e-06" ixz="-0.0" iyy="0.001367" iyz="-0.0" izz="0.001728"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/mi_powerbank_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.095218"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/mi_powerbank_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.008984188212149163 -0.0010000000000000696 -0.001907656860890783"/>
+    <mass value="1.1515616542314233"/>
+    <inertia ixx="0.000489" ixy="-0.0" ixz="-0.000148" iyy="0.000861" iyz="0.0" izz="0.000987"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.132718"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.132718"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Raspberry_Pi_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.05586565226313551 0.05903732841291765 -0.03223032578741099"/>
+    <mass value="0.11046204859047104"/>
+    <inertia ixx="3.3e-05" ixy="2e-06" ixz="7e-06" iyy="7.4e-05" iyz="-0.0" izz="0.000102"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.132718"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/Raspberry_Pi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.132718"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/Raspberry_Pi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Arduino_Uno_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.035262235061320125 -0.07098325390230543 -0.03407158780117017"/>
+    <mass value="0.09575566619921361"/>
+    <inertia ixx="2.6e-05" ixy="3e-06" ixz="1e-06" iyy="4.3e-05" iyz="0.0" izz="6.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.132718"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/Arduino_Uno_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.001443 0.0 -0.132718"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/Arduino_Uno_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cam_holder_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.07577133767564244 1.064492102518244e-06 0.00999123082134186"/>
+    <mass value="0.009781937489392125"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="-1e-06" iyy="7e-06" iyz="-0.0" izz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.000721 0.0 -0.049609"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/cam_holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.000721 0.0 -0.049609"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/cam_holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pi_cam_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0009448681788197522 -0.0003892293542710298 -0.0010238227051375948"/>
+    <mass value="0.006742869651497777"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.121843 0.0 -0.079634"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/pi_cam_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.121843 0.0 -0.079634"/>
+    <geometry>
+      <mesh filename="package://teslabot_description/meshes/pi_cam_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="spacerFRJ" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.095218"/>
+  <parent link="base_link"/>
+  <child link="spacerFR_1"/>
+</joint>
+
+<joint name="spacerFLJ" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.095218"/>
+  <parent link="base_link"/>
+  <child link="spacerFL_1"/>
+</joint>
+
+<joint name="spacerBLJ" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.095218"/>
+  <parent link="base_link"/>
+  <child link="spacerBL_1"/>
+</joint>
+
+<joint name="spacerBRJ" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.095218"/>
+  <parent link="base_link"/>
+  <child link="spacerBR_1"/>
+</joint>
+
+<joint name="top_J" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.09 -0.065 0.04"/>
+  <parent link="spacerBR_1"/>
+  <child link="top_1"/>
+</joint>
+
+<joint name="motorFR_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.091218"/>
+  <parent link="base_link"/>
+  <child link="motorFR_1"/>
+</joint>
+
+<joint name="motorFL_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.091218"/>
+  <parent link="base_link"/>
+  <child link="motor_v1_1"/>
+</joint>
+
+<joint name="motorBR_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.091218"/>
+  <parent link="base_link"/>
+  <child link="motorBR_1"/>
+</joint>
+
+<joint name="motorBL_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.091218"/>
+  <parent link="base_link"/>
+  <child link="motorBL_1"/>
+</joint>
+
+<joint name="FWR_J" type="continuous">
+  <origin rpy="0 0 0" xyz="0.039358 -0.0634 -0.056759"/>
+  <parent link="motorFR_1"/>
+  <child link="FWR_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="FWL_J" type="continuous">
+  <origin rpy="0 0 0" xyz="0.039358 0.0634 -0.056759"/>
+  <parent link="motor_v1_1"/>
+  <child link="FWL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="BWR_J" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.040802 -0.0634 -0.056759"/>
+  <parent link="motorBR_1"/>
+  <child link="BWR_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="BWL_J" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.040802 0.0634 -0.056759"/>
+  <parent link="motorBL_1"/>
+  <child link="BWL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="l289N_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.000721 0.0 0.045609"/>
+  <parent link="base_link"/>
+  <child link="L298N__1"/>
+</joint>
+
+<joint name="battery_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.091218"/>
+  <parent link="base_link"/>
+  <child link="battery_1"/>
+</joint>
+
+<joint name="Powerbn_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.001443 0.0 0.095218"/>
+  <parent link="base_link"/>
+  <child link="mi_powerbank_2_v1_1"/>
+</joint>
+
+<joint name="lidar_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.09 0.065 -0.0025"/>
+  <parent link="top_1"/>
+  <child link="Lidar_1"/>
+</joint>
+
+<joint name="raspberry_pi_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.09 0.065 -0.0025"/>
+  <parent link="top_1"/>
+  <child link="Raspberry_Pi_1"/>
+</joint>
+
+<joint name="arduino_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.09 0.065 -0.0025"/>
+  <parent link="top_1"/>
+  <child link="Arduino_Uno_v1_1"/>
+</joint>
+
+<joint name="cam_holder_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.000721 0.0 0.049609"/>
+  <parent link="base_link"/>
+  <child link="cam_holder_1"/>
+</joint>
+
+<joint name="picam_J" type="fixed">
+  <origin rpy="0 0 0" xyz="0.121122 0.0 0.030025"/>
+  <parent link="cam_holder_1"/>
+  <child link="pi_cam_1"/>
+</joint>
+
+</robot>

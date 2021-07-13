@@ -1,0 +1,34 @@
+<!--
+<launch>
+  <param command="$(find xacro)/xacro $(find teslabot_description)/urdf/teslabot.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model teslabot" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+</launch>
+-->
+<launch>
+  <param command="$(find xacro)/xacro $(find teslabot_description)/urdf/teslabot.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model teslabot" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  <arg default="$(find teslabot_description)/urdf/teslabot.xacro" name="model"/>
+  <arg default="true" name="gui"/>
+  <arg default="$(find teslabot_description)/launch/urdf.rviz" name="rvizconfig"/>
+  <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
+  <param name="use_gui" value="$(arg gui)"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+</launch>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="teslabot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="FWR_J_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="FWR_J">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="FWR_J_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="FWL_J_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="FWL_J">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="FWL_J_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="BWR_J_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="BWR_J">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="BWR_J_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="BWL_J_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="BWL_J">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="BWL_J_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
